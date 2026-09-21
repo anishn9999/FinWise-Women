@@ -7,10 +7,9 @@ The platform provides educational resources and practical tools to help users un
 ## 🌐 Live Demo
 
 🚀 **Live Website:**
-
+[Click here](https://ai-based-financial-literacy-platfor-seven.vercel.app/)
 
 ---
-
 ## 📌 About the Project
 
 Many people face difficulties understanding financial concepts because of complicated terminology, lack of awareness, and limited access to practical financial education.
