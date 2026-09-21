@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Financial Safety | FinWise Women</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                FinWise <span>Women</span>
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="learn.html">Learn</a>
+
+                <a href="budget.html">Budget</a>
+
+                <a href="savings.html">Savings</a>
+
+                <a href="chatbot.html">AI Assistant</a>
+
+                <a href="safety.html">Safety</a>
+
+                <a href="dashboard.html" class="nav-login">
+                    Dashboard
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Safety Hero -->
+    <section class="safety-hero">
+
+        <div class="safety-hero-content">
+
+            <span class="hero-badge">
+                🛡️ Financial Safety
+            </span>
+
+            <h1>
+                Protect Your
+                <span>Money Online</span>
+            </h1>
+
+            <p>
+                Learn how to identify common financial scams
+                and protect your personal and banking information.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Safety Cards -->
+    <section class="safety-section">
+
+        <div class="section-heading">
+
+            <span>COMMON SCAMS</span>
+
+            <h2>
+                Know the Warning Signs
+            </h2>
+
+            <p>
+                Understanding common scams can help you
+                recognize suspicious situations.
+            </p>
+
+        </div>
+
+
+        <div class="safety-grid">
+
+
+            <!-- UPI Scam -->
+            <div class="safety-card">
+
+                <div class="safety-icon">
+                    📱
+                </div>
+
+                <h3>
+                    UPI & Payment Scams
+                </h3>
+
+                <p>
+                    Scammers may use fake payment requests,
+                    QR codes or misleading messages.
+                </p>
+
+                <button
+                    class="safety-btn"
+                    onclick="showSafety('upi')"
+                >
+                    Safety Tips →
+                </button>
+
+            </div>
+
+
+            <!-- OTP Scam -->
+            <div class="safety-card">
+
+                <div class="safety-icon">
+                    🔐
+                </div>
+
+                <h3>
+                    OTP & PIN Fraud
+                </h3>
+
+                <p>
+                    Never share your OTP, PIN or password
+                    with someone who contacts you unexpectedly.
+                </p>
+
+                <button
+                    class="safety-btn"
+                    onclick="showSafety('otp')"
+                >
+                    Safety Tips →
+                </button>
+
+            </div>
+
+
+            <!-- Phishing -->
+            <div class="safety-card">
+
+                <div class="safety-icon">
+                    🎣
+                </div>
+
+                <h3>
+                    Phishing
+                </h3>
+
+                <p>
+                    Fake emails, SMS messages and websites
+                    may try to steal your information.
+                </p>
+
+                <button
+                    class="safety-btn"
+                    onclick="showSafety('phishing')"
+                >
+                    Safety Tips →
+                </button>
+
+            </div>
+
+
+            <!-- Loan Scam -->
+            <div class="safety-card">
+
+                <div class="safety-icon">
+                    💳
+                </div>
+
+                <h3>
+                    Fake Loan Apps
+                </h3>
+
+                <p>
+                    Be careful with unknown apps promising
+                    instant loans or unusually easy approval.
+                </p>
+
+                <button
+                    class="safety-btn"
+                    onclick="showSafety('loan')"
+                >
+                    Safety Tips →
+                </button>
+
+            </div>
+
+
+            <!-- Investment Scam -->
+            <div class="safety-card">
+
+                <div class="safety-icon">
+                    📈
+                </div>
+
+                <h3>
+                    Investment Scams
+                </h3>
+
+                <p>
+                    Be cautious of promises of guaranteed
+                    high returns with little or no risk.
+                </p>
+
+                <button
+                    class="safety-btn"
+                    onclick="showSafety('investment')"
+                >
+                    Safety Tips →
+                </button>
+
+            </div>
+
+
+            <!-- Social Engineering -->
+            <div class="safety-card">
+
+                <div class="safety-icon">
+                    👤
+                </div>
+
+                <h3>
+                    Impersonation Scams
+                </h3>
+
+                <p>
+                    Someone may pretend to be a bank employee,
+                    friend, company representative or official.
+                </p>
+
+                <button
+                    class="safety-btn"
+                    onclick="showSafety('impersonation')"
+                >
+                    Safety Tips →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Safety Checklist -->
+    <section class="safety-checklist">
+
+        <div class="section-heading">
+
+            <span>SAFETY CHECKLIST</span>
+
+            <h2>
+                Simple Rules to Remember
+            </h2>
+
+        </div>
+
+
+        <div class="checklist-container">
+
+            <div class="check-item">
+                <span>✓</span>
+                <p>
+                    Never share your OTP, PIN or password.
+                </p>
+            </div>
+
+            <div class="check-item">
+                <span>✓</span>
+                <p>
+                    Verify payment requests before sending money.
+                </p>
+            </div>
+
+            <div class="check-item">
+                <span>✓</span>
+                <p>
+                    Avoid clicking suspicious links.
+                </p>
+            </div>
+
+            <div class="check-item">
+                <span>✓</span>
+                <p>
+                    Use official websites and apps for financial services.
+                </p>
+            </div>
+
+            <div class="check-item">
+                <span>✓</span>
+                <p>
+                    Do not install unknown apps at someone's request.
+                </p>
+            </div>
+
+            <div class="check-item">
+                <span>✓</span>
+                <p>
+                    Be cautious when someone creates urgency or pressure.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Details -->
+    <section
+        class="safety-details"
+        id="safetyDetails"
+    >
+
+        <div class="safety-detail-box">
+
+            <button
+                class="safety-close"
+                onclick="closeSafety()"
+            >
+                ✕
+            </button>
+
+            <div id="safetyContent"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Emergency Section -->
+    <section class="safety-help">
+
+        <div>
+
+            <h2>
+                🚨 If You Suspect a Financial Fraud
+            </h2>
+
+            <p>
+                Act quickly. Contact your bank or payment
+                service through its official channel and
+                preserve relevant transaction details,
+                messages and screenshots.
+            </p>
+
+            <p>
+                In India, financial cyber-fraud can also be
+                reported through the official government
+                cybercrime reporting channels.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>FinWise Women</h3>
+
+                <p>
+                    Simple financial education and tools
+                    for women.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="learn.html">Learn</a>
+
+                <a href="budget.html">Budget</a>
+
+                <a href="savings.html">Savings</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span class="current-year"></span>
+                FinWise Women. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+    <!-- Safety JavaScript -->
+    <script>
+
+        const safetyTopics = {
+
+            upi: {
+                title: "📱 UPI & Payment Safety",
+                text: `
+                    <p>
+                        Be careful when receiving unexpected
+                        payment requests or QR codes.
+                    </p>
+
+                    <ul>
+                        <li>Verify the recipient before paying.</li>
+                        <li>Do not approve an unexpected payment request.</li>
+                        <li>Never share your UPI PIN.</li>
+                        <li>Remember that entering a UPI PIN generally authorizes a payment.</li>
+                    </ul>
+                `
+            },
+
+
+            otp: {
+                title: "🔐 OTP & PIN Safety",
+                text: `
+                    <p>
+                        OTPs and PINs are confidential credentials.
+                    </p>
+
+                    <ul>
+                        <li>Never share an OTP with callers.</li>
+                        <li>Never share your ATM or UPI PIN.</li>
+                        <li>Do not share passwords with strangers.</li>
+                        <li>If a message seems suspicious, verify through the official bank channel.</li>
+                    </ul>
+                `
+            },
+
+
+            phishing: {
+                title: "🎣 Phishing Safety",
+                text: `
+                    <p>
+                        Phishing attempts often use fake messages
+                        or websites to collect personal information.
+                    </p>
+
+                    <ul>
+                        <li>Check the website address carefully.</li>
+                        <li>Avoid unexpected links.</li>
+                        <li>Do not enter banking information on suspicious websites.</li>
+                        <li>Access financial services through official apps or websites.</li>
+                    </ul>
+                `
+            },
+
+
+            loan: {
+                title: "💳 Fake Loan App Safety",
+                text: `
+                    <p>
+                        Some fraudulent services may use attractive
+                        loan offers to obtain personal or financial information.
+                    </p>
+
+                    <ul>
+                        <li>Check the lender and app carefully.</li>
+                        <li>Read the loan terms before accepting.</li>
+                        <li>Review interest, fees and repayment requirements.</li>
+                        <li>Avoid giving sensitive information to unknown services.</li>
+                    </ul>
+                `
+            },
+
+
+            investment: {
+                title: "📈 Investment Scam Safety",
+                text: `
+                    <p>
+                        Be cautious of investment opportunities that
+                        promise unusually high or guaranteed returns.
+                    </p>
+
+                    <ul>
+                        <li>Understand the investment before paying.</li>
+                        <li>Check whether the provider is properly regulated when applicable.</li>
+                        <li>Do not invest because someone pressures you.</li>
+                        <li>Remember that investments can involve risk.</li>
+                    </ul>
+                `
+            },
+
+
+            impersonation: {
+                title: "👤 Impersonation Scam Safety",
+                text: `
+                    <p>
+                        A scammer may pretend to be someone you trust.
+                    </p>
+
+                    <ul>
+                        <li>Do not trust caller ID alone.</li>
+                        <li>Verify the person's identity independently.</li>
+                        <li>Never transfer money because of pressure or threats.</li>
+                        <li>Contact the organization using its official contact details.</li>
+                    </ul>
+                `
+            }
+
+        };
+
+
+        function showSafety(topic) {
+
+            const details =
+                document.getElementById("safetyDetails");
+
+            const content =
+                document.getElementById("safetyContent");
+
+            const selected =
+                safetyTopics[topic];
+
+            if (!selected) {
+                return;
+            }
+
+            content.innerHTML = `
+                <h2>${selected.title}</h2>
+                ${selected.text}
+            `;
+
+            details.style.display = "block";
+
+            details.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+
+        function closeSafety() {
+
+            document.getElementById(
+                "safetyDetails"
+            ).style.display = "none";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

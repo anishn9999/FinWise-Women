@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | FinWise Women</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            💰 FinWise Women
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="learn.html">Learn</a>
+
+            <a href="budget.html">Budget</a>
+
+            <a href="savings.html">Savings</a>
+
+            <a href="chatbot.html">AI Assistant</a>
+
+            <a href="safety.html">Safety</a>
+
+            <button
+                id="logoutBtn"
+                class="dashboard-logout">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- DASHBOARD -->
+
+    <main class="dashboard">
+
+        <section class="dashboard-welcome">
+
+            <span class="dashboard-label">
+                FINWISE WOMEN DASHBOARD
+            </span>
+
+            <h1>
+                Welcome,
+                <span id="userName">User</span> 👋
+            </h1>
+
+            <p>
+                Continue your financial learning journey.
+            </p>
+
+        </section>
+
+
+        <!-- DASHBOARD CARDS -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <span>QUICK ACTIONS</span>
+
+                <h2>
+                    Manage Your Financial Journey
+                </h2>
+
+                <p>
+                    Choose a section to continue.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+
+                <!-- LEARN -->
+
+                <article class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        📚
+                    </div>
+
+                    <h3>
+                        Financial Learning
+                    </h3>
+
+                    <p>
+                        Learn saving, budgeting,
+                        investment and other financial
+                        concepts.
+                    </p>
+
+                    <a
+                        href="learn.html"
+                        class="dashboard-link">
+                        Start Learning →
+                    </a>
+
+                </article>
+
+
+                <!-- BUDGET -->
+
+                <article class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Budget Planner
+                    </h3>
+
+                    <p>
+                        Calculate income, expenses
+                        and monthly savings.
+                    </p>
+
+                    <a
+                        href="budget.html"
+                        class="dashboard-link">
+                        Plan Budget →
+                    </a>
+
+                </article>
+
+
+                <!-- SAVINGS -->
+
+                <article class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🎯
+                    </div>
+
+                    <h3>
+                        Savings Goals
+                    </h3>
+
+                    <p>
+                        Set a target and track your
+                        savings progress.
+                    </p>
+
+                    <a
+                        href="savings.html"
+                        class="dashboard-link">
+                        Set Goal →
+                    </a>
+
+                </article>
+
+
+                <!-- AI -->
+
+                <article class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        AI Assistant
+                    </h3>
+
+                    <p>
+                        Ask questions and understand
+                        financial topics more easily.
+                    </p>
+
+                    <a
+                        href="chatbot.html"
+                        class="dashboard-link">
+                        Ask AI →
+                    </a>
+
+                </article>
+
+
+                <!-- SAFETY -->
+
+                <article class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        Financial Safety
+                    </h3>
+
+                    <p>
+                        Learn about online scams,
+                        fraud and phishing.
+                    </p>
+
+                    <a
+                        href="safety.html"
+                        class="dashboard-link">
+                        Stay Safe →
+                    </a>
+
+                </article>
+
+
+                <!-- ACCOUNT -->
+
+                <article class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        👤
+                    </div>
+
+                    <h3>
+                        My Account
+                    </h3>
+
+                    <p>
+                        Your FinWise Women account
+                        is currently active.
+                    </p>
+
+                    <span class="dashboard-status">
+                        ✓ Account Active
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINANCIAL TIP -->
+
+        <section class="dashboard-tip">
+
+            <div class="tip-icon">
+                💡
+            </div>
+
+            <div>
+
+                <h3>
+                    Financial Tip
+                </h3>
+
+                <p>
+                    Keep track of your income and regular
+                    expenses. Reviewing your budget regularly
+                    can help you understand your spending
+                    habits.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 FinWise Women
+            </p>
+
+            <p>
+                Educational platform — not financial advice.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+    <!-- DASHBOARD JAVASCRIPT -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const token =
+                    localStorage.getItem("token");
+
+                const userData =
+                    localStorage.getItem("user");
+
+
+                // Login protection
+
+                if (!token || !userData) {
+
+                    window.location.href =
+                        "login.html";
+
+                    return;
+
+                }
+
+
+                // Display user name
+
+                try {
+
+                    const user =
+                        JSON.parse(userData);
+
+                    document.getElementById(
+                        "userName"
+                    ).textContent =
+                        user.name || "User";
+
+                } catch (error) {
+
+                    localStorage.removeItem("token");
+
+                    localStorage.removeItem("user");
+
+                    window.location.href =
+                        "login.html";
+
+                }
+
+
+                // Logout
+
+                document.getElementById(
+                    "logoutBtn"
+                ).addEventListener(
+                    "click",
+                    function () {
+
+                        localStorage.removeItem("token");
+
+                        localStorage.removeItem("user");
+
+                        window.location.href =
+                            "login.html";
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

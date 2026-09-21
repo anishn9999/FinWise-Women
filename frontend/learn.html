@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Financial Learning - FinWise Women">
+
+    <title>Learn | FinWise Women</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            💰 FinWise Women
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="learn.html">
+                Learn
+            </a>
+
+            <a href="budget.html">
+                Budget
+            </a>
+
+            <a href="savings.html">
+                Savings
+            </a>
+
+            <a href="chatbot.html">
+                AI Assistant
+            </a>
+
+            <a href="safety.html">
+                Safety
+            </a>
+
+            <a href="login.html"
+               class="nav-login">
+                Login
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="learning-hero">
+
+            <div>
+
+                <span class="dashboard-label">
+                    FINANCIAL EDUCATION
+                </span>
+
+                <h1>
+                    Learn Money,
+                    <br>
+                    Step by Step 📚
+                </h1>
+
+                <p>
+                    Understand important financial concepts
+                    in simple language and build your
+                    financial knowledge.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TOPICS ================= -->
+
+        <section class="learning-section">
+
+            <div class="section-heading">
+
+                <span>
+                    LEARNING MODULES
+                </span>
+
+                <h2>
+                    Explore Financial Topics
+                </h2>
+
+                <p>
+                    Start with the basics and learn at your
+                    own pace.
+                </p>
+
+            </div>
+
+
+            <div class="learning-grid">
+
+
+                <!-- SAVING -->
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        💰
+                    </div>
+
+                    <h3>
+                        Saving Money
+                    </h3>
+
+                    <p>
+                        Learn why saving is important and
+                        how to build a regular saving habit.
+                    </p>
+
+                    <button
+                        class="learn-btn"
+                        onclick="showTopic('saving')">
+                        Learn More →
+                    </button>
+
+                </article>
+
+
+                <!-- BUDGET -->
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Budgeting
+                    </h3>
+
+                    <p>
+                        Understand income, expenses and
+                        how to plan a monthly budget.
+                    </p>
+
+                    <button
+                        class="learn-btn"
+                        onclick="showTopic('budget')">
+                        Learn More →
+                    </button>
+
+                </article>
+
+
+                <!-- INVESTMENT -->
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        📈
+                    </div>
+
+                    <h3>
+                        Investment Basics
+                    </h3>
+
+                    <p>
+                        Learn basic concepts such as risk,
+                        return and diversification.
+                    </p>
+
+                    <button
+                        class="learn-btn"
+                        onclick="showTopic('investment')">
+                        Learn More →
+                    </button>
+
+                </article>
+
+
+                <!-- BANKING -->
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        🏦
+                    </div>
+
+                    <h3>
+                        Banking
+                    </h3>
+
+                    <p>
+                        Understand bank accounts, deposits,
+                        interest and basic banking services.
+                    </p>
+
+                    <button
+                        class="learn-btn"
+                        onclick="showTopic('banking')">
+                        Learn More →
+                    </button>
+
+                </article>
+
+
+                <!-- INSURANCE -->
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        Insurance
+                    </h3>
+
+                    <p>
+                        Learn the purpose of insurance and
+                        common types of financial protection.
+                    </p>
+
+                    <button
+                        class="learn-btn"
+                        onclick="showTopic('insurance')">
+                        Learn More →
+                    </button>
+
+                </article>
+
+
+                <!-- LOAN -->
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        🏦
+                    </div>
+
+                    <h3>
+                        Loans & Credit
+                    </h3>
+
+                    <p>
+                        Understand interest, repayment,
+                        credit scores and responsible borrowing.
+                    </p>
+
+                    <button
+                        class="learn-btn"
+                        onclick="showTopic('loan')">
+                        Learn More →
+                    </button>
+
+                </article>
+
+
+                <!-- DIGITAL PAYMENT -->
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        📱
+                    </div>
+
+                    <h3>
+                        Digital Payments
+                    </h3>
+
+                    <p>
+                        Learn about UPI, online banking and
+                        safe digital transactions.
+                    </p>
+
+                    <button
+                        class="learn-btn"
+                        onclick="showTopic('digital')">
+                        Learn More →
+                    </button>
+
+                </article>
+
+
+                <!-- FINANCIAL SAFETY -->
+
+                <article class="learning-card">
+
+                    <div class="learning-icon">
+                        🔐
+                    </div>
+
+                    <h3>
+                        Financial Safety
+                    </h3>
+
+                    <p>
+                        Learn how to recognize phishing,
+                        scams and suspicious financial requests.
+                    </p>
+
+                    <button
+                        class="learn-btn"
+                        onclick="showTopic('safety')">
+                        Learn More →
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TOPIC DETAILS ================= -->
+
+        <section
+            id="topicDetails"
+            class="topic-details"
+            style="display: none;">
+
+            <div class="topic-box">
+
+                <button
+                    class="topic-close"
+                    onclick="closeTopic()">
+                    ✕
+                </button>
+
+                <span id="topicIcon">
+                    📚
+                </span>
+
+                <h2 id="topicTitle">
+                    Financial Topic
+                </h2>
+
+                <p id="topicText">
+                    Select a topic to learn more.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="learning-cta">
+
+            <div>
+
+                <h2>
+                    Want to Practice What You Learn?
+                </h2>
+
+                <p>
+                    Use our budget planner and savings
+                    goal tools to apply your knowledge.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="budget.html"
+                        class="btn btn-primary">
+                        Try Budget Planner
+                    </a>
+
+                    <a
+                        href="savings.html"
+                        class="btn btn-secondary">
+                        Create Savings Goal
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 FinWise Women
+            </p>
+
+            <p>
+                Educational platform — not financial advice.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+    <!-- ================= LEARNING JS ================= -->
+
+    <script>
+
+        const topics = {
+
+            saving: {
+                icon: "💰",
+                title: "Saving Money",
+                text: "Saving means keeping part of your income for future needs. A simple approach is to first understand your income and regular expenses, then decide how much you can save regularly."
+            },
+
+            budget: {
+                icon: "📊",
+                title: "Budgeting",
+                text: "A budget is a plan for your income and expenses. It helps you understand where your money goes and how much may remain for savings or other goals."
+            },
+
+            investment: {
+                icon: "📈",
+                title: "Investment Basics",
+                text: "Investing involves putting money into assets with the aim of earning a return. Investments can have different levels of risk, so understanding risk, return and diversification is important."
+            },
+
+            banking: {
+                icon: "🏦",
+                title: "Banking",
+                text: "Banks provide services such as savings accounts, deposits, payments and loans. Different accounts and products have different features, interest rates and conditions."
+            },
+
+            insurance: {
+                icon: "🛡️",
+                title: "Insurance",
+                text: "Insurance is designed to provide financial protection against specified risks. Policies can differ in coverage, exclusions, premiums and claim conditions."
+            },
+
+            loan: {
+                icon: "🏦",
+                title: "Loans & Credit",
+                text: "A loan is money borrowed that normally has to be repaid according to agreed terms. Before borrowing, understand the interest rate, fees, repayment schedule and total repayment amount."
+            },
+
+            digital: {
+                icon: "📱",
+                title: "Digital Payments",
+                text: "Digital payments allow money to be transferred electronically. Never share your OTP, PIN or password with another person, even if someone claims to be from a bank or payment service."
+            },
+
+            safety: {
+                icon: "🔐",
+                title: "Financial Safety",
+                text: "Be careful with unexpected links, requests for OTPs or PINs, urgent payment demands and unknown callers. Verify information through official channels before making a financial transaction."
+            }
+
+        };
+
+
+        function showTopic(topicName) {
+
+            const topic =
+                topics[topicName];
+
+            if (!topic) {
+                return;
+            }
+
+
+            document.getElementById(
+                "topicIcon"
+            ).textContent =
+                topic.icon;
+
+
+            document.getElementById(
+                "topicTitle"
+            ).textContent =
+                topic.title;
+
+
+            document.getElementById(
+                "topicText"
+            ).textContent =
+                topic.text;
+
+
+            document.getElementById(
+                "topicDetails"
+            ).style.display =
+                "block";
+
+
+            document.getElementById(
+                "topicDetails"
+            ).scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+
+        function closeTopic() {
+
+            document.getElementById(
+                "topicDetails"
+            ).style.display =
+                "none";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

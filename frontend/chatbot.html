@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Financial Assistant | FinWise Women</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                FinWise <span>Women</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="learn.html">Learn</a>
+                <a href="budget.html">Budget</a>
+                <a href="savings.html">Savings</a>
+                <a href="chatbot.html">AI Assistant</a>
+                <a href="safety.html">Safety</a>
+                <a href="dashboard.html" class="nav-login">
+                    Dashboard
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Chatbot Hero -->
+    <section class="chatbot-hero">
+
+        <div class="chatbot-hero-content">
+
+            <span class="hero-badge">
+                🤖 AI Financial Assistant
+            </span>
+
+            <h1>
+                Your Personal
+                <span>Financial Assistant</span>
+            </h1>
+
+            <p>
+                Ask simple questions about saving, budgeting,
+                banking and basic financial concepts.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Chatbot -->
+    <section class="chatbot-section">
+
+        <div class="chat-container">
+
+            <!-- Chat Header -->
+            <div class="chat-header">
+
+                <div class="ai-avatar">
+                    🤖
+                </div>
+
+                <div>
+                    <h2>FinWise AI</h2>
+                    <p>
+                        ● Online • Financial Education Assistant
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Messages -->
+            <div
+                class="chat-messages"
+                id="chatMessages"
+            >
+
+                <div class="message ai-message">
+
+                    <div class="message-avatar">
+                        🤖
+                    </div>
+
+                    <div class="message-content">
+
+                        <p>
+                            Hello! 👋 I'm FinWise AI.
+                        </p>
+
+                        <p>
+                            I can help you understand budgeting,
+                            saving, banking and other basic
+                            financial topics.
+                        </p>
+
+                        <p>
+                            What would you like to learn today?
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Suggestions -->
+            <div class="chat-suggestions">
+
+                <button onclick="sendSuggestion('How can I save money?')">
+                    💰 How can I save money?
+                </button>
+
+                <button onclick="sendSuggestion('What is budgeting?')">
+                    📊 What is budgeting?
+                </button>
+
+                <button onclick="sendSuggestion('What is an emergency fund?')">
+                    🛡️ Emergency fund
+                </button>
+
+                <button onclick="sendSuggestion('What is a bank account?')">
+                    🏦 Bank account
+                </button>
+
+            </div>
+
+
+            <!-- Input -->
+            <form
+                id="chatForm"
+                class="chat-input-area"
+            >
+
+                <input
+                    type="text"
+                    id="chatInput"
+                    placeholder="Ask a financial question..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit">
+                    Send ➤
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Disclaimer -->
+    <section class="chat-disclaimer">
+
+        <div>
+
+            <h3>⚠️ Important</h3>
+
+            <p>
+                FinWise AI provides general financial education.
+                It is not a substitute for professional financial,
+                tax or legal advice. Always verify important
+                financial decisions with a qualified professional.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>FinWise Women</h3>
+
+                <p>
+                    Simple financial education and tools
+                    for women.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+                <a href="learn.html">Learn</a>
+                <a href="budget.html">Budget</a>
+                <a href="savings.html">Savings</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span class="current-year"></span>
+                FinWise Women. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+    <!-- Chatbot JavaScript -->
+    <script>
+
+        const chatForm =
+            document.getElementById("chatForm");
+
+        const chatInput =
+            document.getElementById("chatInput");
+
+        const chatMessages =
+            document.getElementById("chatMessages");
+
+
+        chatForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+                const message =
+                    chatInput.value.trim();
+
+                if (!message) {
+                    return;
+                }
+
+                addUserMessage(message);
+
+                chatInput.value = "";
+
+                setTimeout(function () {
+
+                    const response =
+                        getAIResponse(message);
+
+                    addAIMessage(response);
+
+                }, 500);
+
+            }
+        );
+
+
+        function sendSuggestion(text) {
+
+            chatInput.value = text;
+
+            chatForm.dispatchEvent(
+                new Event("submit")
+            );
+
+        }
+
+
+        function addUserMessage(message) {
+
+            const div =
+                document.createElement("div");
+
+            div.className =
+                "message user-message";
+
+            div.innerHTML = `
+                <div class="message-content">
+                    <p>${escapeHTML(message)}</p>
+                </div>
+
+                <div class="message-avatar">
+                    👩
+                </div>
+            `;
+
+            chatMessages.appendChild(div);
+
+            scrollChat();
+
+        }
+
+
+        function addAIMessage(message) {
+
+            const div =
+                document.createElement("div");
+
+            div.className =
+                "message ai-message";
+
+            div.innerHTML = `
+                <div class="message-avatar">
+                    🤖
+                </div>
+
+                <div class="message-content">
+                    <p>${message}</p>
+                </div>
+            `;
+
+            chatMessages.appendChild(div);
+
+            scrollChat();
+
+        }
+
+
+        function getAIResponse(message) {
+
+            const text =
+                message.toLowerCase();
+
+
+            if (
+                text.includes("save") ||
+                text.includes("saving")
+            ) {
+
+                return `
+                    💰 <strong>Saving Tip:</strong><br><br>
+
+                    Start by setting a small monthly
+                    savings target. Track your expenses
+                    and try to save a fixed amount regularly.
+                    <br><br>
+
+                    You can also use the
+                    <strong>Budget Planner</strong>
+                    to calculate your monthly savings.
+                `;
+
+            }
+
+
+            if (
+                text.includes("budget") ||
+                text.includes("budgeting")
+            ) {
+
+                return `
+                    📊 <strong>Budgeting</strong> means
+                    planning how you will use your income.
+                    <br><br>
+
+                    A simple budget can include:
+                    <br>
+                    • Income<br>
+                    • Essential expenses<br>
+                    • Savings<br>
+                    • Other spending
+                    <br><br>
+
+                    Try our <strong>Budget Planner</strong>
+                    to calculate your monthly savings.
+                `;
+
+            }
+
+
+            if (
+                text.includes("emergency") ||
+                text.includes("emergency fund")
+            ) {
+
+                return `
+                    🛡️ An <strong>emergency fund</strong>
+                    is money kept aside for unexpected
+                    expenses such as urgent repairs,
+                    medical costs or temporary loss of income.
+                    <br><br>
+
+                    The amount you need depends on your
+                    personal circumstances and regular expenses.
+                `;
+
+            }
+
+
+            if (
+                text.includes("bank") ||
+                text.includes("account")
+            ) {
+
+                return `
+                    🏦 A <strong>bank account</strong> is an
+                    account that lets you keep, receive and
+                    manage money through a bank.
+                    <br><br>
+
+                    Common types include savings accounts
+                    and current accounts.
+                `;
+
+            }
+
+
+            if (
+                text.includes("investment") ||
+                text.includes("invest")
+            ) {
+
+                return `
+                    📈 <strong>Investment</strong> means putting
+                    money into an asset or financial product
+                    with the goal of potentially growing it
+                    over time.
+                    <br><br>
+
+                    Investments can involve risk, so understand
+                    the product and its risks before investing.
+                `;
+
+            }
+
+
+            if (
+                text.includes("loan") ||
+                text.includes("credit")
+            ) {
+
+                return `
+                    💳 A <strong>loan</strong> is money borrowed
+                    from a lender that is generally repaid over
+                    an agreed period, often with interest.
+                    <br><br>
+
+                    Before taking a loan, understand the interest,
+                    fees, repayment schedule and total amount
+                    payable.
+                `;
+
+            }
+
+
+            if (
+                text.includes("hello") ||
+                text.includes("hi") ||
+                text.includes("hey")
+            ) {
+
+                return `
+                    👋 Hello!
+                    <br><br>
+                    I'm FinWise AI. Ask me about
+                    <strong>saving, budgeting, banking,
+                    investments or loans.</strong>
+                `;
+
+            }
+
+
+            return `
+                🤖 I can help with basic financial education
+                about <strong>saving, budgeting, banking,
+                investments, loans and financial safety.</strong>
+                <br><br>
+
+                Try asking:
+                <br>
+                • How can I save money?<br>
+                • What is budgeting?<br>
+                • What is an emergency fund?
+            `;
+
+        }
+
+
+        function scrollChat() {
+
+            chatMessages.scrollTop =
+                chatMessages.scrollHeight;
+
+        }
+
+
+        function escapeHTML(text) {
+
+            const div =
+                document.createElement("div");
+
+            div.textContent = text;
+
+            return div.innerHTML;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

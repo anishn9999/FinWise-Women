@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Budget Planner | FinWise Women</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                FinWise <span>Women</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="learn.html">Learn</a>
+                <a href="budget.html">Budget</a>
+                <a href="savings.html">Savings</a>
+                <a href="chatbot.html">AI Assistant</a>
+                <a href="safety.html">Safety</a>
+                <a href="dashboard.html" class="nav-login">Dashboard</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Budget Hero -->
+    <section class="budget-hero">
+
+        <div class="budget-hero-content">
+
+            <span class="hero-badge">
+                💰 Smart Money Planning
+            </span>
+
+            <h1>
+                Create Your
+                <span>Monthly Budget</span>
+            </h1>
+
+            <p>
+                Track your income and expenses and understand
+                how much you can save every month.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Budget Section -->
+    <section class="budget-section">
+
+        <div class="budget-container">
+
+            <!-- Form -->
+            <div class="budget-card">
+
+                <h2>📊 Monthly Budget</h2>
+
+                <p class="budget-subtitle">
+                    Enter your monthly income and expenses.
+                </p>
+
+                <form id="budgetForm">
+
+                    <div class="form-group">
+
+                        <label for="income">
+                            Monthly Income (₹)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="income"
+                            placeholder="Example: 30000"
+                            min="0"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="expenses">
+                            Monthly Expenses (₹)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="expenses"
+                            placeholder="Example: 20000"
+                            min="0"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary budget-btn"
+                    >
+                        Calculate Budget
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Result -->
+            <div class="budget-result-card">
+
+                <h2>💡 Your Budget Summary</h2>
+
+                <div class="budget-result">
+
+                    <div class="result-item">
+
+                        <span>Income</span>
+
+                        <strong id="incomeResult">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-item">
+
+                        <span>Expenses</span>
+
+                        <strong id="expenseResult">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-item savings-result">
+
+                        <span>Monthly Savings</span>
+
+                        <strong id="savingsResult">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="budgetMessage"
+                    class="budget-message"
+                >
+                    Enter your income and expenses to see
+                    your savings.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Tips -->
+    <section class="budget-tips">
+
+        <div class="section-heading">
+
+            <span>SMART MONEY TIPS</span>
+
+            <h2>
+                Build Better Financial Habits
+            </h2>
+
+            <p>
+                Small financial decisions today can create
+                better financial security tomorrow.
+            </p>
+
+        </div>
+
+
+        <div class="tip-grid">
+
+            <div class="tip-card">
+                <div class="tip-icon">💵</div>
+
+                <h3>Track Expenses</h3>
+
+                <p>
+                    Know where your money goes every month.
+                </p>
+            </div>
+
+
+            <div class="tip-card">
+                <div class="tip-icon">🎯</div>
+
+                <h3>Set Savings Goals</h3>
+
+                <p>
+                    Save regularly for emergencies and future goals.
+                </p>
+            </div>
+
+
+            <div class="tip-card">
+                <div class="tip-icon">🛡️</div>
+
+                <h3>Keep Emergency Savings</h3>
+
+                <p>
+                    Build an emergency fund for unexpected expenses.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>FinWise Women</h3>
+
+                <p>
+                    Simple financial education and tools
+                    for women.
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+                <a href="learn.html">Learn</a>
+                <a href="budget.html">Budget</a>
+                <a href="savings.html">Savings</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span class="current-year"></span>
+                FinWise Women. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+    <!-- Budget JavaScript -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const form =
+                document.getElementById("budgetForm");
+
+            form.addEventListener("submit", async function (event) {
+
+                event.preventDefault();
+
+                const income =
+                    Number(document.getElementById("income").value);
+
+                const expenses =
+                    Number(document.getElementById("expenses").value);
+
+                const incomeResult =
+                    document.getElementById("incomeResult");
+
+                const expenseResult =
+                    document.getElementById("expenseResult");
+
+                const savingsResult =
+                    document.getElementById("savingsResult");
+
+                const message =
+                    document.getElementById("budgetMessage");
+
+
+                if (income < 0 || expenses < 0) {
+
+                    message.textContent =
+                        "Income and expenses cannot be negative.";
+
+                    return;
+                }
+
+
+                if (expenses > income) {
+
+                    message.textContent =
+                        "⚠️ Your expenses are higher than your income.";
+
+                } else {
+
+                    message.textContent =
+                        "✅ Good! You have money available for savings.";
+
+                }
+
+
+                const savings = income - expenses;
+
+
+                incomeResult.textContent =
+                    "₹" + income.toLocaleString("en-IN");
+
+                expenseResult.textContent =
+                    "₹" + expenses.toLocaleString("en-IN");
+
+                savingsResult.textContent =
+                    "₹" + savings.toLocaleString("en-IN");
+
+
+                // Get logged-in user
+                const userData =
+                    localStorage.getItem("user");
+
+                if (!userData) {
+
+                    message.textContent =
+                        "⚠️ Please login before saving your budget.";
+
+                    return;
+                }
+
+
+                const user =
+                    JSON.parse(userData);
+
+
+                // Save budget to backend
+                try {
+
+                    const response =
+                        await fetch("/api/budget", {
+
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+
+                            body: JSON.stringify({
+
+                                userId: user.id,
+
+                                income: income,
+
+                                expenses: expenses
+
+                            })
+
+                        });
+
+
+                    const data =
+                        await response.json();
+
+
+                    if (response.ok) {
+
+                        message.innerHTML =
+                            "✅ Budget calculated and saved successfully!";
+
+                    } else {
+
+                        message.textContent =
+                            "❌ " +
+                            (data.message ||
+                            "Unable to save budget.");
+
+                    }
+
+                } catch (error) {
+
+                    console.error(error);
+
+                    message.textContent =
+                        "❌ Server connection failed.";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
